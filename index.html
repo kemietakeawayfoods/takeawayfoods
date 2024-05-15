@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kemie Takeaway Foods</title>
+    <style>
+        
+        body {
+            background-color: #ff670e;
+            
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #6495ED; /* Sweetcorn color */
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+        footer img {
+            width: 30px;
+            margin: 0 10px;
+        }
+
+        /* Add animation for products */
+        @keyframes moveRightToLeft {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+
+        @keyframes moveBottomToTop {
+            from { transform: translateY(100%); }
+            to { transform: translateY(-100%); }
+        }
+
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .marquee img {
+            display: inline-block;
+            margin-right: 20px;
+            animation: moveRightToLeft 10s linear infinite;
+        }
+
+        .marquee .fish {
+            animation-direction: alternate;
+            animation-delay: 5s;
+        }
+
+        .marquee .chicken {
+            animation-delay: 2.5s;
+        }
+
+        .marquee img{
+            max-width: 200px;
+    
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kemie Takeaway Foods</h1>
+        <nav>
+            <ul>
+                <li><a href="#products">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#pays">Pays</a></li>
+                <li><a href="#support">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Kemie Takeaway Foods</h2>
+        <form>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <button type="button" onclick="login()">Login</button>
+            <button type="button" onclick="register()">Register</button>
+        </form>
+        <a href="#products">See Our Products</a>
+    </section>
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="marquee">
+            <img class="chicken" src="chiken0.jpg" alt="Chicken">
+            <img class="fish" src="fish0.jpg"alt="fish">
+            <img class="bottom-to-top" src="matooke0.jpg" alt="matooke">
+        </div>
+    </section>
+
+    <section id="pays">
+        <h2>Payment Options</h2>
+        <!-- Insert payment options here -->
+    </section>
+
+    <section id="support">
+        <h2>Customer Support</h2>
+        <!-- Insert customer support information here -->
+    </section>
+
+    <footer>
+        <div>
+            <img src="image2.png" alt="image2"> +25677488414
+            
+            <img src="image1.jpg" alt="image1"> Follow us
+        </div>
+        <div>
+            info@kemie.com
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll to products section when Home button is clicked
+        document.querySelector('nav a[href="#products"]').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.querySelector('#products').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        function login() {
+            // Add login functionality here
+        }
+
+        function register() {
+            // Add register functionality here
+            // Redirect to registration form or handle registration logic
+        }
+    </script>
+</body>
+</html>
